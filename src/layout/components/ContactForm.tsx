@@ -32,11 +32,11 @@ export default function ContactForm() {
   });
 
   const onSubmit = async (data: any) => {
-    console.log("Form Submitted", data);
+    // console.log("Form Submitted", data);
     // toast.success("Form submitted successfully!");
     // form.reset();
 
-    // setIsFormSubmitted(true);
+    setIsFormSubmitted(true);
 
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
     const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
