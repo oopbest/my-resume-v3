@@ -5,32 +5,35 @@ import Skill from "./components/Skill";
 import ContactForm from "./components/ContactForm";
 import Footer from "@/components/Footer";
 import AboutMe from "./components/AboutMe";
-// import useScrollReveal from "@/hooks/useScrollReveal";
+import { motion } from "framer-motion";
 
 const MainLayout = () => {
-  // useScrollReveal(".about-me", { delay: 300, origin: "left" });
-  // useScrollReveal(".skill", { delay: 500, origin: "right" });
-  // useScrollReveal(".portfolio", { delay: 700, origin: "top" });
-  // useScrollReveal(".contact", { delay: 900, origin: "bottom" });
   return (
     <div className="flex flex-col bg-black text-white">
       <Navbar />
       <Hero />
 
       <div className="flex flex-col container mx-auto overflow-x-hidden">
-        <section className="about-me">
+        <motion.div
+          className="flex space-x-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.6 }}
+        >
           <AboutMe />
-        </section>
-        <section className="skill">
+        </motion.div>
+
+        <motion.div
+          className="flex space-x-4"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+        >
           <Skill />
-        </section>
-        <section className="portfolio">
-          <Portfolio />
-        </section>
+        </motion.div>
+        <Portfolio />
       </div>
-      <section className="contact">
-        <ContactForm />
-      </section>
+      <ContactForm />
       <Footer />
     </div>
   );
