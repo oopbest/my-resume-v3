@@ -18,7 +18,7 @@ const mySkills = [
     stacks: [
       "React.js, Next.js (12, 14, 15) for modern, interactive UIs",
       "TypeScript & JavaScript (ES6+) for scalable and maintainable code",
-      "Tailwind CSS, Bootstrap, Chakra UI, DaisyUI for stunning and responsive designs",
+      "Tailwind CSS, Bootstrap, Chakra UI, DaisyUI, Shadcn UI for stunning and responsive designs",
       "State Management with Redux, Redux Toolkit, Zustand, and useContext",
     ],
     devIcons: [
@@ -27,7 +27,11 @@ const mySkills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
+      "/devicons/chakra-ui.svg",
+      "/devicons/daisy-ui.svg",
+      "/devicons/shadcn-ui.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg",
+      "/devicons/zustand.svg",
     ],
   },
   {
@@ -112,6 +116,7 @@ const mySkills = [
     ],
     devIcons: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-plain.svg",
+      "/devicons/react-native.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
     ],
