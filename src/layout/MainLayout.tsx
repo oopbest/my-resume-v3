@@ -8,10 +8,10 @@ import AboutMe from "./components/AboutMe";
 import useScrollReveal from "@/hooks/useScrollReveal";
 
 const MainLayout = () => {
-  useScrollReveal(".about-me", { delay: 300, origin: "left" });
-  useScrollReveal(".skill", { delay: 500, origin: "right" });
-  useScrollReveal(".portfolio", { delay: 700, origin: "top" });
-  useScrollReveal(".contact", { delay: 900, origin: "bottom" });
+  // useScrollReveal(".about-me", { delay: 300, origin: "left" });
+  // useScrollReveal(".skill", { delay: 500, origin: "right" });
+  // useScrollReveal(".portfolio", { delay: 700, origin: "top" });
+  // useScrollReveal(".contact", { delay: 900, origin: "bottom" });
   return (
     <div className="flex flex-col bg-black text-white">
       <Navbar />
