@@ -85,7 +85,7 @@ export default function ContactForm() {
               <strong>Email:</strong> setthawut.p@yahoo.com
             </p>
             <p>
-              <strong>Phone:</strong> +66 88 2605687
+              <strong>Phone:</strong> +66 88 260 5687
             </p>
             <p>
               <strong>Address:</strong> Bangkok, Thailand

@@ -16,9 +16,10 @@ const MainLayout = () => {
       <div className="flex flex-col container mx-auto overflow-x-hidden">
         <motion.div
           className="flex space-x-4"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.6 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          viewport={{ once: true }} // Ensure animation only happens once
         >
           <AboutMe />
         </motion.div>
@@ -26,14 +27,31 @@ const MainLayout = () => {
         <motion.div
           className="flex space-x-4"
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.8 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }} // Ensure animation only happens once
         >
           <Skill />
         </motion.div>
-        <Portfolio />
+
+        <motion.div
+          className="flex space-x-4"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          viewport={{ once: true }} // Ensure animation only happens once
+        >
+          <Portfolio />
+        </motion.div>
       </div>
-      <ContactForm />
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+      >
+        <ContactForm />
+      </motion.div>
       <Footer />
     </div>
   );
