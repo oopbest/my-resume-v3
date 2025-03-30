@@ -17,7 +17,7 @@ const MainLayout = () => {
       <Navbar />
       <Hero />
 
-      <div className="flex flex-col container mx-auto">
+      <div className="flex flex-col container mx-auto overflow-x-hidden">
         <section className="about-me">
           <AboutMe />
         </section>
