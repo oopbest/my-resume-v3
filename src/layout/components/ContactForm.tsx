@@ -15,6 +15,8 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -23,15 +25,49 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const form = useForm({
     resolver: zodResolver(formSchema),
     defaultValues: { name: "", email: "", message: "" },
   });
 
-  const onSubmit = (data: any) => {
-    // console.log("Form Submitted", data);
-    toast.success("Form submitted successfully!");
-    form.reset();
+  const onSubmit = async (data: any) => {
+    console.log("Form Submitted", data);
+    // toast.success("Form submitted successfully!");
+    // form.reset();
+
+    // setIsFormSubmitted(true);
+
+    const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+    console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
+
+    const templateParams = {
+      from_name: data.name,
+      from_email: data.email,
+      to_email: "setthawut.p@yahoo.com",
+      message: data.message,
+    };
+
+    emailjs
+      .send(
+        SERVICE_ID, // Replace with your EmailJS Service ID
+        TEMPLATE_ID, // Replace with your EmailJS Template ID
+        templateParams,
+        PUBLIC_KEY // Replace with your EmailJS Public Key
+      )
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        toast.success("Message sent successfully!");
+        setIsFormSubmitted(false);
+
+        form.reset();
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+        toast.error("Failed to send message. Please try again.");
+      });
   };
 
   return (
@@ -112,7 +148,11 @@ export default function ContactForm() {
               />
 
               {/* Submit Button */}
-              <Button type="submit" className="w-full">
+              <Button
+                type="submit"
+                className="w-full"
+                disabled={isFormSubmitted}
+              >
                 Send Message
               </Button>
             </form>
