@@ -5,7 +5,7 @@ import Skill from "./components/Skill";
 import ContactForm from "./components/ContactForm";
 import Footer from "@/components/Footer";
 import AboutMe from "./components/AboutMe";
-import useScrollReveal from "@/hooks/useScrollReveal";
+// import useScrollReveal from "@/hooks/useScrollReveal";
 
 const MainLayout = () => {
   // useScrollReveal(".about-me", { delay: 300, origin: "left" });
