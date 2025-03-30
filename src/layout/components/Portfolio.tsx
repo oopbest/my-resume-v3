@@ -64,7 +64,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div id="portfolio">
+    <div id="portfolio" className="p-6">
       <h2 className="text-center text-3xl font-bold py-8">Portfolio</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
         {projects.map((project, index) => (

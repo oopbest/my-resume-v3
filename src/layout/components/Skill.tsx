@@ -120,7 +120,7 @@ const mySkills = [
 
 const Skill = () => {
   return (
-    <div id="skills">
+    <div id="skills" className="p-6">
       <h2 className="text-center text-3xl font-bold py-8">Skills</h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {mySkills.map((skill, index) => (
