@@ -23,16 +23,16 @@ const PortfioGrid = ({ project }: Props) => {
     setOpen(true);
   };
   return (
-    <div className=" bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40 transition-all group cursor-pointer">
+    <div className=" bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40 cursor-pointer">
       <div className="mb-4">
         <div
-          className="relative w-full overflow-hidden rounded-md shadow-lg"
+          className="relative w-full overflow-hidden rounded-md shadow-lg group transition-all"
           style={{ paddingTop: "56.25%" }}
         >
           <img
             src={project.photos[0]}
             alt={project.title}
-            className="absolute z-20 inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            className="absolute z-20 inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-75"
           />
           <div className="absolute z-30 inset-0 hidden group-hover:flex items-center justify-center">
             <Button onClick={() => openDialog(project.photos)}>See more</Button>
