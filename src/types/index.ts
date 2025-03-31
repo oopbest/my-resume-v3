@@ -13,4 +13,6 @@ export interface Project {
   description: string;
   stacks: string[];
   photos: string[];
+  projectUrl: string;
+  projectSrc: string;
 }

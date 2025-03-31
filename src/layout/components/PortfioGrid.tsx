@@ -45,6 +45,16 @@ const PortfioGrid = ({ project }: Props) => {
           {stack}
         </p>
       ))}
+      <div className="flex items-end justify-center mt-6 gap-2">
+        <a href={project.projectUrl} target="_blank" rel="noreferrer">
+          <Button variant={"link"}>Visit Site</Button>
+        </a>
+        {project.projectSrc && (
+          <a href={project.projectSrc} target="_blank" rel="noreferrer">
+            <Button variant={"link"}>Source Code</Button>
+          </a>
+        )}
+      </div>
 
       {selectedImage && (
         <Dialog open={open} onOpenChange={setOpen}>

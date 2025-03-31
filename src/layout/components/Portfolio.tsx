@@ -17,6 +17,8 @@ const projects = [
       "/project-4/ss-6.png",
       "/project-4/ss-7.png",
     ],
+    projectUrl: "https://topvalue.com",
+    projectSrc: "",
   },
   {
     id: 3,
@@ -31,6 +33,8 @@ const projects = [
       "/project-3/ss-3.png",
       "/project-3/ss-4.png",
     ],
+    projectUrl: "https://mern-chat-app-yt-8xug.onrender.com/",
+    projectSrc: "https://github.com/oopbest/mern-chat-app",
   },
   {
     id: 2,
@@ -47,6 +51,8 @@ const projects = [
       "/project-2/ss-5.png",
       "/project-2/ss-6.png",
     ],
+    projectUrl: "https://fullstack-chat-app-gcmo.onrender.com",
+    projectSrc: "https://github.com/oopbest/fullstack-chat-app",
   },
   {
     id: 1,
@@ -59,6 +65,8 @@ const projects = [
       "/project-1/ss-3.png",
       "/project-1/ss-4.png",
     ],
+    projectUrl: "https://mern-crash-course-q1vc.onrender.com",
+    projectSrc: "https://github.com/oopbest/mern-crash-course",
   },
 ];
 
