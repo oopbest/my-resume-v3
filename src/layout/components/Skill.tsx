@@ -18,7 +18,7 @@ const mySkills = [
     stacks: [
       "React.js, Next.js (12, 14, 15) for modern, interactive UIs",
       "TypeScript & JavaScript (ES6+) for scalable and maintainable code",
-      "Tailwind CSS, Bootstrap, Chakra UI, DaisyUI, Shadcn UI for stunning and responsive designs",
+      "Tailwind CSS, Bootstrap, daisyUI, shadcn/ui, Chakra UI for stunning and responsive designs",
       "State Management with Redux, Redux Toolkit, Zustand, and useContext",
     ],
     devIcons: [
