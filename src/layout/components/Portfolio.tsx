@@ -6,7 +6,7 @@ const projects = [
     title: "Website E-Commerce topvalue.com",
     description: "Description of Project 4",
     stacks: [
-      "Next.js 12, Redux Toolkit, NextAuth.js, REST API, PHP (Magento 2), MySQL, Google Cloud Platform",
+      "Next.js 12, Bootstrap, Redux Toolkit, NextAuth.js, REST API, PHP (Magento 2), MySQL, Google Cloud Platform",
     ],
     photos: [
       "/project-4/ss-1.png",
