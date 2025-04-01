@@ -12,7 +12,7 @@ const mySkills = [
   {
     id: 1,
     title: "Frontend Development",
-    icon: <Monitor />,
+    icon: <Monitor className="animate-bounce" />,
     description:
       "I build responsive, high-performance web applications using the latest technologies and frameworks. I specialize in building user-friendly interfaces and optimizing performance for optimal user experience.",
     stacks: [
@@ -37,7 +37,7 @@ const mySkills = [
   {
     id: 2,
     title: "Backend Development",
-    icon: <Server />,
+    icon: <Server className="animate-bounce" />,
     description:
       "I create secure and scalable backend systems using the latest technologies and frameworks. I specialize in building robust and efficient server-side logic and APIs for web applications.",
     stacks: [
@@ -61,7 +61,7 @@ const mySkills = [
   {
     id: 3,
     title: "API Integration & Development",
-    icon: <Network />,
+    icon: <Network className="animate-bounce" />,
     description:
       "I develop and integrate powerful APIs for web applications. I specialize in building secure and efficient APIs for web applications.",
     stacks: [
@@ -78,7 +78,7 @@ const mySkills = [
   {
     id: 4,
     title: "CI/CD & Deployment",
-    icon: <UploadCloud />,
+    icon: <UploadCloud className="animate-bounce" />,
     description:
       "I streamline the development lifecycle with CI/CD and deployment tools.",
     stacks: [
@@ -97,7 +97,7 @@ const mySkills = [
   {
     id: 5,
     title: "AI-Powered Development",
-    icon: <Cpu />,
+    icon: <Cpu className="animate-bounce" />,
     description: "Leveraging AI tools like GitHub Copilot and Codeium",
     stacks: [
       "GitHub Copilot & Codeium for enhanced productivity",
@@ -108,7 +108,7 @@ const mySkills = [
   {
     id: 6,
     title: "Currently Exploring",
-    icon: <Lightbulb />,
+    icon: <Lightbulb className="animate-bounce" />,
     description: "I am currently exploring the following technologies",
     stacks: [
       "Flutter (Dart) & React Native for cross-platform mobile development",
