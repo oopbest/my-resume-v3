@@ -41,7 +41,6 @@ const mySkills = [
     description:
       "I create secure and scalable backend systems using the latest technologies and frameworks. I specialize in building robust and efficient server-side logic and APIs for web applications.",
     stacks: [
-      "Node.js, Express.js for server-side logic and APIs",
       "Node.js & Express for RESTful APIs and server-side logic",
       "PHP (Magento 1 & 2, Laravel) for e-commerce and enterprise solutions",
       "Database Management: MySQL, PostgreSQL, MongoDB, Firebase",
