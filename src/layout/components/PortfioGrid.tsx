@@ -10,7 +10,7 @@ import { Project } from "@/types";
 import { useState } from "react";
 import ImageCarousel from "./ImageCarousel";
 
-const MAX_LENGTH = 100;
+const MAX_LENGTH = 85;
 
 type Props = {
   project: Project;
