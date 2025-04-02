@@ -21,7 +21,7 @@ const projects = [
       "/project-5/ss-10.png",
     ],
     projectUrl: "https://realtime-spotify-clone-4ey3.onrender.com",
-    projectSrc: "",
+    projectSrc: "https://github.com/oopbest/realtime-spotify-clone",
   },
   {
     id: 4,
