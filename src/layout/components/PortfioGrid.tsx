@@ -10,6 +10,8 @@ import { Project } from "@/types";
 import { useState } from "react";
 import ImageCarousel from "./ImageCarousel";
 
+const MAX_LENGTH = 100;
+
 type Props = {
   project: Project;
 };
@@ -17,13 +19,17 @@ type Props = {
 const PortfioGrid = ({ project }: Props) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string[]>([]);
+  const [expanded, setExpanded] = useState(false);
 
   const openDialog = (images: string[]) => {
     setSelectedImage(images);
     setOpen(true);
   };
+
+  const toggleExpand = () => setExpanded(!expanded);
+
   return (
-    <div className=" bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40 cursor-pointer">
+    <div className="bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40 cursor-pointer">
       <div className="mb-4">
         <div
           className="relative w-full overflow-hidden rounded-md shadow-lg group transition-all"
@@ -40,6 +46,19 @@ const PortfioGrid = ({ project }: Props) => {
         </div>
       </div>
       <p>{project.title}</p>
+      <p className="text-sm text-zinc-400 mt-2">
+        {expanded || project.description.length <= MAX_LENGTH
+          ? project.description
+          : `${project.description.slice(0, MAX_LENGTH)}... `}
+        {project.description.length > MAX_LENGTH && (
+          <span
+            className="text-xs p-0 ms-2 text-secondary"
+            onClick={toggleExpand}
+          >
+            {expanded ? "Read less" : "Read more"}
+          </span>
+        )}
+      </p>
       {project.stacks.map((stack, index) => (
         <p key={index} className="text-xs mt-4">
           {stack}
