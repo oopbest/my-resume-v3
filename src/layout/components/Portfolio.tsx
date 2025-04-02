@@ -2,11 +2,33 @@ import PortfioGrid from "./PortfioGrid";
 
 const projects = [
   {
+    id: 5,
+    title: "Spotify Clone - Advanced Project",
+    description: "Description of Project 5",
+    stacks: [
+      "React, Typescript, Zustand, Tailwind CSS, shadcn/ui, Node.js, Express, MongoDB, Mongoose, Socket.io, Cloudinary",
+    ],
+    photos: [
+      "/project-5/ss-1.png",
+      "/project-5/ss-2.png",
+      "/project-5/ss-3.png",
+      "/project-5/ss-4.png",
+      "/project-5/ss-5.png",
+      "/project-5/ss-6.png",
+      "/project-5/ss-7.png",
+      "/project-5/ss-8.png",
+      "/project-5/ss-9.png",
+      "/project-5/ss-10.png",
+    ],
+    projectUrl: "https://realtime-spotify-clone-4ey3.onrender.com",
+    projectSrc: "",
+  },
+  {
     id: 4,
     title: "Website E-Commerce topvalue.com",
     description: "Description of Project 4",
     stacks: [
-      "Next.js 12, Bootstrap, Redux Toolkit, NextAuth.js, REST API, PHP (Magento 2), MySQL, Google Cloud Platform",
+      "Next.js, Typescript, Redux Toolkit, Bootstrap, NextAuth.js, REST API, PHP (Magento 2), MySQL, Google Cloud Platform",
     ],
     photos: [
       "/project-4/ss-1.png",
@@ -25,7 +47,7 @@ const projects = [
     title: "Full-Stack Friendly Real-Time Chat App",
     description: "Description of Project 1",
     stacks: [
-      "React, Tailwind CSS, Daisy UI, Node.js, Express, MongoDB, Mongoose, Zustand, useContext, Socket.io, JWT",
+      "React, Zustand, useContext, Tailwind CSS, Daisy UI, Node.js, Express, MongoDB, Mongoose, Socket.io, JWT",
     ],
     photos: [
       "/project-3/ss-1.png",
@@ -41,7 +63,7 @@ const projects = [
     title: "Full-Stack Real-Time Chat App with Image Uploads",
     description: "Description of Project 2",
     stacks: [
-      "React, Tailwind CSS, Daisy UI, Node.js, Express, MongoDB, Mongoose, Zustand, Cloudinary, Socket.io, JWT",
+      "React, Zustand, Tailwind CSS, Daisy UI, Node.js, Express, MongoDB, Mongoose, Cloudinary, Socket.io, JWT",
     ],
     photos: [
       "/project-2/ss-1.png",
@@ -58,7 +80,7 @@ const projects = [
     id: 1,
     title: "Full-stack a Product Store & Deployment",
     description: "Description of Project 3",
-    stacks: ["React, Chakra UI, Zustand, Node.js, MongoDB, Mongoose"],
+    stacks: ["React, Zustand, Chakra UI, Node.js, MongoDB, Mongoose"],
     photos: [
       "/project-1/ss-1.png",
       "/project-1/ss-2.png",
