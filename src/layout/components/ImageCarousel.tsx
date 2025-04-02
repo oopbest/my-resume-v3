@@ -36,7 +36,11 @@ const ImageCarousel = ({ images }: Props) => {
         <CarouselContent>
           {images.map((image, index) => (
             <CarouselItem key={index}>
-              <img src={image} alt={`Image ${index + 1}`} className="w-full " />
+              <img
+                src={image}
+                alt={`Image ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
