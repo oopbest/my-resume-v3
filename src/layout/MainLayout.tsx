@@ -6,6 +6,7 @@ import ContactForm from "./components/ContactForm";
 import Footer from "@/components/Footer";
 import AboutMe from "./components/AboutMe";
 import { motion } from "framer-motion";
+import WorkExp from "./components/WorkExp";
 
 const MainLayout = () => {
   return (
@@ -25,6 +26,8 @@ const MainLayout = () => {
           >
             <AboutMe />
           </motion.div>
+
+          <WorkExp />
 
           {/* skills */}
           <motion.div

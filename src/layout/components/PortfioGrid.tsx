@@ -76,7 +76,7 @@ const PortfioGrid = ({ project }: Props) => {
       <div className="flex items-end justify-center mt-6 gap-2">
         <a href={project.projectUrl} target="_blank" rel="noreferrer">
           <Button>
-            <LuTvMinimalPlay className="h-5 w-5 animate-pulse" /> Live Demo
+            <LuTvMinimalPlay className="h-5 w-5 animate-pulse" /> Visit Site
           </Button>
         </a>
         {project.projectSrc && (

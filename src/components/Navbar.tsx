@@ -11,7 +11,24 @@ import { AvatarDemo } from "@/layout/components/Avatar";
 import { Menu } from "lucide-react";
 import { Link } from "react-scroll"; // For smooth scrolling
 
-const menus = ["About", "Skills", "Portfolio", "Contact"];
+const menus = [
+  {
+    title: "About",
+    url: "about",
+  },
+  {
+    title: "Work Experience",
+    url: "work",
+  },
+  {
+    title: "Portfolio",
+    url: "portfolio",
+  },
+  {
+    title: "Contact",
+    url: "contact",
+  },
+];
 
 export default function Navbar() {
   return (
@@ -27,10 +44,10 @@ export default function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 text-black">
-          {menus.map((menu) => (
+          {menus.map((menu, index) => (
             <Link
-              key={menu}
-              to={menu.toLowerCase()}
+              key={index}
+              to={menu.url.toLowerCase()}
               spy={true}
               smooth={true}
               offset={-50}
@@ -38,7 +55,7 @@ export default function Navbar() {
               className={`cursor-pointer hover:text-primary`}
               activeClass="text-primary"
             >
-              {menu}
+              {menu.title}
             </Link>
           ))}
         </nav>
@@ -69,10 +86,10 @@ export default function Navbar() {
               <SheetDescription>{""}</SheetDescription>
             </SheetHeader>
             <nav className="flex flex-col space-y-4 mt-6">
-              {menus.map((menu) => (
+              {menus.map((menu, index) => (
                 <Link
-                  key={menu}
-                  to={menu.toLowerCase()}
+                  key={index}
+                  to={menu.url.toLowerCase()}
                   spy={true}
                   smooth={true}
                   offset={-50}
@@ -80,7 +97,7 @@ export default function Navbar() {
                   className={`cursor-pointer hover:text-primary`}
                   activeClass="text-primary"
                 >
-                  {menu}
+                  {menu.title}
                 </Link>
               ))}
             </nav>
