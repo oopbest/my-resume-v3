@@ -17,7 +17,7 @@ const myExps = [
     keyProject: [
       "Topvalue E-commerce website - topvalue.com (Electronics, Home appliances, and Lifestyle goods)",
       "Topvalue Housebrand websites (Alectric, Altec, Cocugu, Fennix, Namiko)",
-      "Develop microservices for Topvalue & CJ Express (Easy Shopping)",
+      "Developed microservices for Topvalue & CJ Express (Easy Shopping)",
       "Dashboard Realtime Monitoring, Promotions Report can be Import,Export (First React Project)",
       "POS System (Offline store management)",
       "E-commerce website - topcosme.com (Cosmetics & Beauty)",
