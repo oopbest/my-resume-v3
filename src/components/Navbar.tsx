@@ -22,6 +22,10 @@ const menus = [
     url: "work",
   },
   {
+    title: "Skills",
+    url: "skills",
+  },
+  {
     title: "Portfolio",
     url: "portfolio",
   },
