@@ -32,7 +32,7 @@ const PortfioGrid = ({ project }: Props) => {
   const toggleExpand = () => setExpanded(!expanded);
 
   return (
-    <div className="bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40 cursor-pointer">
+    <div className="bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40">
       <div className="mb-4">
         <div
           className="relative w-full overflow-hidden rounded-md shadow-lg group transition-all"
@@ -72,10 +72,11 @@ const PortfioGrid = ({ project }: Props) => {
           </Badge>
         ))}
       </div>
+
       <div className="flex items-end justify-center mt-6 gap-2">
         <a href={project.projectUrl} target="_blank" rel="noreferrer">
           <Button>
-            <LuTvMinimalPlay className="h-5 w-5" /> Live Demo
+            <LuTvMinimalPlay className="h-5 w-5 animate-pulse" /> Live Demo
           </Button>
         </a>
         {project.projectSrc && (
