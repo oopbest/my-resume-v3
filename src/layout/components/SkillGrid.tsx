@@ -14,7 +14,7 @@ type Props = {
 
 const SkillGrid = ({ skill }: Props) => {
   return (
-    <Card>
+    <Card className="shadow-lg">
       <CardHeader>
         <CardTitle>
           <p className="text-xl flex items-center gap-2">
@@ -24,7 +24,7 @@ const SkillGrid = ({ skill }: Props) => {
         <CardDescription>{skill.description}</CardDescription>
       </CardHeader>
       <CardContent>
-        <ul className="list-disc list-inside text-zinc-800">
+        <ul className="list-disc list-inside">
           {skill.stacks.map((stack, index) => (
             <li key={index}>{stack}</li>
           ))}

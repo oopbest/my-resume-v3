@@ -13,7 +13,7 @@ import { Badge } from "@/components/ui/badge";
 import { FaGithub } from "react-icons/fa";
 import { LuTvMinimalPlay } from "react-icons/lu";
 
-const MAX_LENGTH = 180;
+const MAX_LENGTH = 150;
 
 type Props = {
   project: Project;
@@ -32,7 +32,7 @@ const PortfioGrid = ({ project }: Props) => {
   const toggleExpand = () => setExpanded(!expanded);
 
   return (
-    <div className="bg-zinc-800/40 p-4 rounded-md hover:bg-zinc-700/40">
+    <div className="p-4 rounded-md bg-secondary/40">
       <div className="mb-4">
         <div
           className="relative w-full overflow-hidden rounded-md shadow-lg group transition-all"
@@ -51,22 +51,19 @@ const PortfioGrid = ({ project }: Props) => {
         </div>
       </div>
       <p>{project.title}</p>
-      <p className="text-sm text-zinc-400 my-4">
+      <p className="text-sm my-4">
         {expanded || project.description.length <= MAX_LENGTH
           ? project.description
           : `${project.description.slice(0, MAX_LENGTH)}... `}
         {project.description.length > MAX_LENGTH && (
-          <span
-            className="text-xs p-0 ms-2 text-secondary"
-            onClick={toggleExpand}
-          >
+          <span className="text-xs p-0 ms-2" onClick={toggleExpand}>
             {expanded ? "Read less" : "Read more"}
           </span>
         )}
       </p>
       <div className="flex flex-wrap gap-2">
         {project.stacks.map((stack, index) => (
-          <Badge key={index} variant={"secondary"} className="flex gap-1">
+          <Badge key={index} className="flex gap-1">
             {stack.icon}
             {stack.name}
           </Badge>

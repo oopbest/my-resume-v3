@@ -47,7 +47,7 @@ const myExps = [
 
 const WorkExp = () => {
   return (
-    <div id="work" className="p-6 bg-zinc-600">
+    <div id="work" className="p-6">
       <h3 className="text-center text-3xl font-bold py-8">Work Experience</h3>
       {myExps.map((exp, index) => (
         <div className="p-4" key={index}>

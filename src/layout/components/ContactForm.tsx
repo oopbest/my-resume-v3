@@ -72,7 +72,7 @@ export default function ContactForm() {
   return (
     <div id="contact" className=" lg:py-32">
       <h2 className="text-center text-3xl font-bold py-8">Contact Me</h2>
-      <div className="max-w-4xl mx-auto bg-zinc-800 p-8 rounded-xl shadow-lg flex flex-col md:flex-row gap-8">
+      <div className="max-w-4xl mx-auto p-8 rounded-xl border shadow-lg flex flex-col md:flex-row gap-8">
         {/* Left Side - Description */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-semibold">Get in Touch</h2>

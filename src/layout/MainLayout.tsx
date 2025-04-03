@@ -12,7 +12,7 @@ const MainLayout = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col overflow-x-hidden bg-black text-white">
+      <div className="flex flex-col overflow-x-hidden">
         <Hero />
 
         <div className="container mx-auto">
