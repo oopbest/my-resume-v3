@@ -63,7 +63,7 @@ const PortfioGrid = ({ project }: Props) => {
       </p>
       <div className="flex flex-wrap gap-2">
         {project.stacks.map((stack, index) => (
-          <Badge key={index} className="flex gap-1">
+          <Badge key={index} className="flex gap-1 font-light">
             {stack.icon}
             {stack.name}
           </Badge>

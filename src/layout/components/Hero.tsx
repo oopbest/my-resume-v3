@@ -63,7 +63,7 @@ export default function HeroAnimation() {
         </Link>
 
         <a onClick={handleDownload}>
-          <Button variant={"secondary"} className="px-6 py-3 text-lg">
+          <Button className="px-6 py-3 text-lg bg-primary/50">
             <IoMdDownload />
             Download CV
           </Button>

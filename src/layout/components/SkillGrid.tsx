@@ -32,7 +32,9 @@ const SkillGrid = ({ skill }: Props) => {
       </CardContent>
       <CardFooter className="max-w-sm flex flex-wrap mx-auto gap-4 items-center justify-center">
         {skill.devIcons.map((icon, index) => (
-          <img key={index} src={icon} alt={skill.title} className="w-10 h-10" />
+          <div className="bg-zinc-200 rounded-md p-2">
+            <img key={index} src={icon} alt={skill.title} className="w-8 h-8" />
+          </div>
         ))}
       </CardFooter>
     </Card>
