@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+import { IoMdDownload } from "react-icons/io";
+import { MdOutlineMarkEmailUnread } from "react-icons/md";
 
 export default function HeroAnimation() {
   const handleDownload = () => {
@@ -55,12 +57,15 @@ export default function HeroAnimation() {
         transition={{ duration: 1, delay: 0.6 }}
       >
         <Link to="contact" spy={true} smooth={true} offset={-50} duration={500}>
-          <Button className="px-6 py-3 text-lg bg-primary">Contact Me</Button>
+          <Button className="px-6 py-3 text-lg bg-primary">
+            <MdOutlineMarkEmailUnread /> Contact Me
+          </Button>
         </Link>
 
         <a onClick={handleDownload}>
           <Button variant="outline" className="px-6 py-3 text-lg text-black">
-            Resume
+            <IoMdDownload />
+            Download CV
           </Button>
         </a>
       </motion.div>
