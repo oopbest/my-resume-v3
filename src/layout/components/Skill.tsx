@@ -97,9 +97,10 @@ const mySkills = [
     id: 5,
     title: "AI-Powered Development",
     icon: <Cpu className="animate-bounce" />,
-    description: "Leveraging AI tools like GitHub Copilot and Codeium",
+    description:
+      "Leveraging AI tools like GitHub Copilot and Windsurf Plugin (formerly Codeium)",
     stacks: [
-      "GitHub Copilot & Codeium for enhanced productivity",
+      "GitHub Copilot & Windsurf Plugin (formerly Codeium) for enhanced productivity",
       "AI-assisted debugging and code optimization",
     ],
     devIcons: ["/devicons/github-copilot.svg", "/devicons/codeium.svg"],
