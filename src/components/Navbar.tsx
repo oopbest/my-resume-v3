@@ -11,27 +11,39 @@ import { AvatarDemo } from "@/layout/components/Avatar";
 import { ModeToggle } from "@/layout/components/ModeToggle";
 import { Menu } from "lucide-react";
 import { Link } from "react-scroll"; // For smooth scrolling
+import {
+  FaUser,
+  FaBriefcase,
+  FaTools,
+  FaImages,
+  FaEnvelope,
+} from "react-icons/fa";
 
 const menus = [
   {
     title: "About",
     url: "about",
+    icon: <FaUser />,
   },
   {
     title: "Work Experience",
     url: "work",
+    icon: <FaBriefcase />,
   },
   {
     title: "Skills",
     url: "skills",
+    icon: <FaTools />,
   },
   {
     title: "Portfolio",
     url: "portfolio",
+    icon: <FaImages />,
   },
   {
     title: "Contact",
     url: "contact",
+    icon: <FaEnvelope />,
   },
 ];
 
@@ -59,9 +71,10 @@ export default function Navbar() {
                 smooth={true}
                 offset={-50}
                 duration={500}
-                className={`cursor-pointer hover:text-primary`}
+                className={`cursor-pointer hover:text-primary flex items-center gap-2`}
                 activeClass="text-primary"
               >
+                {menu.icon}
                 {menu.title}
               </Link>
             ))}
@@ -102,9 +115,10 @@ export default function Navbar() {
                   smooth={true}
                   offset={-50}
                   duration={500}
-                  className={`cursor-pointer hover:text-primary`}
+                  className={`cursor-pointer hover:text-primary flex items-center gap-2`}
                   activeClass="text-primary"
                 >
+                  {menu.icon}
                   {menu.title}
                 </Link>
               ))}
