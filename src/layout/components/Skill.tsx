@@ -44,6 +44,7 @@ const mySkills = [
       "Node.js & Express for RESTful APIs and server-side logic",
       "PHP (Magento 1 & 2, Laravel) for e-commerce and enterprise solutions",
       "Database Management: MySQL, PostgreSQL, MongoDB, Firebase",
+      "ORMs: Mongoose, Prisma, and Sequelize",
     ],
     devIcons: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-plain-wordmark.svg",
@@ -55,6 +56,8 @@ const mySkills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original-wordmark.svg",
+      "/devicons/prisma.svg",
+      "/devicons/sequelize.svg",
     ],
   },
   {

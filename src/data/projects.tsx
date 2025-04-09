@@ -16,10 +16,55 @@ import {
   SiDaisyui,
   SiChakraui,
   SiMongoose,
+  SiPrisma,
+  SiPostgresql,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
 export const projects = [
+  {
+    id: 6,
+    title: "Build a Complete Social Media App - Next.js",
+    description:
+      "A social media application built using a modern web development stack. It features user authentication, profile creation, post creation, and a social feed. The app is built with Next.js, TypeScript, Tailwind CSS, shadcn/ui, Prisma, and PostgreSQL.",
+    stacks: [
+      {
+        icon: <RiNextjsFill className="text-black-500 text-xl" />,
+        name: "Next.js",
+      },
+      {
+        icon: <BiLogoTypescript className="text-yellow-500 text-xl" />,
+        name: "Typescript",
+      },
+      {
+        icon: <BiLogoTailwindCss className="text-sky-500 text-xl" />,
+        name: "Tailwind CSS",
+      },
+      {
+        icon: <SiShadcnui className="text-black-500 text-xl" />,
+        name: "shadcn/ui",
+      },
+      {
+        icon: <SiPrisma className="text-black-500 text-xl" />,
+        name: "Prisma",
+      },
+      {
+        icon: <SiPostgresql className="text-black-500 text-xl" />,
+        name: "PostgreSQL",
+      },
+    ],
+    photos: [
+      "/project-6/ss-1.png",
+      "/project-6/ss-2.png",
+      "/project-6/ss-3.png",
+      "/project-6/ss-4.png",
+      "/project-6/ss-5.png",
+      "/project-6/ss-6.png",
+      "/project-6/ss-7.png",
+    ],
+    projectUrl: "https://nextjs-socially-six.vercel.app/",
+    projectSrc: "https://github.com/oopbest/nextjs-socially",
+  },
   {
     id: 5,
     title: "Spotify Clone - Advanced Project",
