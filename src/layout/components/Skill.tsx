@@ -68,13 +68,17 @@ const mySkills = [
       "I develop and integrate powerful APIs for web applications. I specialize in building secure and efficient APIs for web applications.",
     stacks: [
       "RESTful API design and implementation",
-      "Secure authentication with JWT, OAuth, bcryptjs, and NextAuth.js",
+      "GraphQL & Hasura.io for real-time data and flexible API development",
+      "Secure authentication with Clerk, JWT, OAuth, bcryptjs, and NextAuth.js",
       "Third-party API integrations",
     ],
     devIcons: [
+      "devicons/clerk.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oauth/oauth-original.svg",
       "/devicons/nextauth.png",
       "/devicons/jwt.svg",
+      "/devicons/graphql.svg",
+      "/devicons/hasura.svg",
     ],
   },
   {
