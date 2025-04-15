@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 import { IoMdDownload } from "react-icons/io";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
+import FlipWordsComponent from "./FlipWord";
 
 export default function HeroAnimation() {
   const handleDownload = () => {
@@ -30,17 +31,10 @@ export default function HeroAnimation() {
       id="hero"
       className="flex flex-col items-center justify-center min-h-screen bg-zinc-800 text-white text-center px-6"
     >
-      <motion.h1
-        className="text-4xl md:text-6xl font-bold mb-4"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        I am a Frontend Developer, Full Stack Developer
-      </motion.h1>
+      <FlipWordsComponent />
 
       <motion.p
-        className="text-lg md:text-xl text-gray-300 mb-6 max-w-2xl"
+        className="text-xl text-secondary dark:text-white mb-6 max-w-2xl"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.3 }}
