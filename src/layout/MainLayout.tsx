@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Hero from "./components/Hero";
 import Portfolio from "./components/Portfolio";
 import Skill from "./components/Skill";
 import ContactForm from "./components/ContactForm";
@@ -7,13 +6,14 @@ import Footer from "@/components/Footer";
 import AboutMe from "./components/AboutMe";
 import { motion } from "framer-motion";
 import WorkExp from "./components/WorkExp";
+import { BackgroundBeamsDemo } from "./components/BackgroundBeamsDemo";
 
 const MainLayout = () => {
   return (
     <>
       <Navbar />
       <div className="flex flex-col overflow-x-hidden">
-        <Hero />
+        <BackgroundBeamsDemo />
 
         <div className="container mx-auto">
           {/* about me */}

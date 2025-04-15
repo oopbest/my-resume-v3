@@ -1,6 +1,6 @@
 import { FlipWords } from "@/components/ui/flip-words";
 
-const FlipWordsComponent = () => {
+const FlipWordsDemo = () => {
   const words = [
     "Setthawut Pimthong",
     "Frontend Developer",
@@ -16,4 +16,4 @@ const FlipWordsComponent = () => {
   );
 };
 
-export default FlipWordsComponent;
+export default FlipWordsDemo;
