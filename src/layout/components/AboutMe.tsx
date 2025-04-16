@@ -2,11 +2,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
+import Topic from "./Topic";
 
 export default function AboutMe() {
   return (
-    <section className="max-w-4xl mx-auto px-4 py-10">
-      <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
+    <section id="about" className="max-w-4xl mx-auto px-4 py-10">
+      <Topic title="About Me" />
 
       <Card className="rounded-2xl shadow-md">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-6 text-center">

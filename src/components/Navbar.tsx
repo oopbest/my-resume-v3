@@ -21,7 +21,7 @@ import {
 
 const menus = [
   {
-    title: "About",
+    title: "About Me",
     url: "about",
     icon: <FaUser />,
   },
