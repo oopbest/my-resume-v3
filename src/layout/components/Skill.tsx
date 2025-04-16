@@ -7,6 +7,7 @@ import {
   UploadCloud,
 } from "lucide-react";
 import SkillGrid from "./SkillGrid";
+import Topic from "./Topic";
 
 const mySkills = [
   {
@@ -137,7 +138,7 @@ const mySkills = [
 const Skill = () => {
   return (
     <div id="skills" className="p-6">
-      <h2 className="text-center text-3xl font-bold py-8">Skills</h2>
+      <Topic title="Skills" />
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {mySkills.map((skill, index) => (
           <SkillGrid key={index} skill={skill} />

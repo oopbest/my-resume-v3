@@ -1,7 +1,9 @@
+import Topic from "./Topic";
+
 const AboutMe = () => {
   return (
     <div id="about" className="p-6">
-      <h2 className="text-center text-3xl font-bold py-8">About Me</h2>
+      <Topic title="About Me" />
       <h3 className="text-white-600 mt-2 text-2xl">
         A highly skilled Full-Stack Developer with 11+ years of experience in
         developing and optimizing web applications. Proficient in both Front-end

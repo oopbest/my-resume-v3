@@ -26,8 +26,8 @@ const menus = [
     icon: <FaUser />,
   },
   {
-    title: "Work Experience",
-    url: "work",
+    title: "Experiences",
+    url: "experiences",
     icon: <FaBriefcase />,
   },
   {
@@ -49,7 +49,7 @@ const menus = [
 
 export default function Navbar() {
   return (
-    <header className="shadow-lg bg-background/95 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="shadow-lg bg-background/95 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60 uppercase">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <a
@@ -106,7 +106,7 @@ export default function Navbar() {
               </SheetTitle>
               <SheetDescription>{""}</SheetDescription>
             </SheetHeader>
-            <nav className="flex flex-col space-y-4 mt-6">
+            <nav className="flex flex-col space-y-4 mt-6 uppercase">
               {menus.map((menu, index) => (
                 <Link
                   key={index}
