@@ -58,7 +58,7 @@ const timelineData: TimelineItem[] = [
 export default function Timeline() {
   return (
     <div id="experiences">
-      <Topic title="Experience" />
+      <Topic title="Experiences" />
       <div className="flex flex-col gap-6 relative pl-6 border-l-2 border-muted-foreground/20">
         {timelineData.map((item, index) => (
           <div key={index} className="relative">
