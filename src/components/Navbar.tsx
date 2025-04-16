@@ -31,8 +31,8 @@ const menus = [
     icon: <FaBriefcase />,
   },
   {
-    title: "Skills",
-    url: "skills",
+    title: "Services",
+    url: "services",
     icon: <FaTools />,
   },
   {
