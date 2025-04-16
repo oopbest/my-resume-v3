@@ -6,8 +6,8 @@ import {
   Server,
   UploadCloud,
 } from "lucide-react";
-import SkillGrid from "./SkillGrid";
 import Topic from "./Topic";
+import { HoverEffect } from "@/components/ui/card-hover-effect.tsx";
 
 const mySkills = [
   {
@@ -141,10 +141,8 @@ const Skill = () => {
   return (
     <div id="services" className="p-6">
       <Topic title="services" />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {mySkills.map((skill, index) => (
-          <SkillGrid key={index} skill={skill} />
-        ))}
+      <div className="w-full">
+        <HoverEffect items={mySkills} />
       </div>
     </div>
   );
