@@ -18,10 +18,53 @@ import {
   SiMongoose,
   SiPrisma,
   SiPostgresql,
+  SiGraphql,
+  SiApollographql,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
 export const projects = [
+  {
+    id: 7,
+    title: "A Full-Stack Expense Tracker",
+    description:
+      "The application is a full-stack expense tracker built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Apollo GraphQL integration.",
+    stacks: [
+      {
+        icon: <FaReact className="text-blue-500 text-xl" />,
+        name: "React.js",
+      },
+      {
+        icon: <BiLogoTailwindCss className="text-sky-500 text-xl" />,
+        name: "Tailwind CSS",
+      },
+      {
+        icon: <FaNode className="text-green-500 text-xl" />,
+        name: "Node.js",
+      },
+      {
+        icon: <SiExpress className="text-black-500 text-xl" />,
+        name: "Express.js",
+      },
+      {
+        icon: <SiGraphql className="text-pink-500 text-xl" />,
+        name: "GraphQL",
+      },
+      {
+        icon: <SiApollographql className="text-black-500 text-xl" />,
+        name: "Apollo GraphQL",
+      },
+    ],
+    photos: [
+      "/project-7/ss-1.png",
+      "/project-7/ss-2.png",
+      "/project-7/ss-3.png",
+      "/project-7/ss-4.png",
+      "/project-7/ss-5.png",
+    ],
+    projectUrl: "https://graphql-crash-course-hqnv.onrender.com",
+    projectSrc: "https://github.com/oopbest/graphql-crash-course",
+  },
   {
     id: 6,
     title: "Build a Complete Social Media App - Next.js",

@@ -13,6 +13,28 @@ type TimelineItem = {
 
 const timelineData: TimelineItem[] = [
   {
+    company: "Seeking New Opportunities",
+    role: "Full-stack Developer",
+    period: "5 Jan 2025 - Present",
+    responsibilities: [
+      "Learning and building full-stack projects.",
+      "The Complete Full-Stack Web Development Bootcamp",
+    ],
+    keyProjects: [
+      "Full-stack Project: Expense Tracker ( MERN Stack with GraphQL )",
+      "Full-stack Project: Tasks To-do List ( Next.js,GraphQL, Hasura )",
+      "Full-stack Project: A Social Media App ( Next.js, Prisma, PostgreSQL )",
+      "Full-stack Project: Spotify Clone - Advanced Project ( MERN Stack )",
+      "Full-Stack Friendly Real-Time Chat App ( MERN Stack ) : Seems like Line app.",
+      "Full-Stack Real Time Chat App with Image Uploads ( MERN Stack ) : Seems like Facebook messenger app.",
+      "Full-stack Project: Product Store CRUD ( MERN Stack ) : It serves as a beginner-friendly crash course for learning how to develop full-stack applications",
+      "React Native Application - Developed a simple page using React Native",
+      "Flutter Application - Created a basic form with stateful widgets in Flutter",
+      "Full-stack simple project - Blogs CRUD ( PERN Stack )",
+    ],
+    badge: "Open to Work",
+  },
+  {
     company: "Topvalue Corporate Ltd.",
     role: "Full-stack Developer",
     period: "1 Sep 2017 - 5 Jan 2025",
