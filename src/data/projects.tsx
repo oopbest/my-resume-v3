@@ -32,7 +32,7 @@ export const projects = [
     stacks: [
       {
         icon: <FaReact className="text-blue-500 text-xl" />,
-        name: "React.js",
+        name: "React",
       },
       {
         icon: <BiLogoTailwindCss className="text-sky-500 text-xl" />,
