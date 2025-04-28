@@ -135,6 +135,21 @@ const mySkills = [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg",
     ],
   },
+  {
+    id: 7,
+    title: "Testing & Quality Assurance",
+    icon: <Lightbulb className="animate-bounce" />,
+    description: "I perform end-to-end testing and quality assurance",
+    stacks: [
+      "Vitest and React Testing Library for unit and component testing",
+      "Storybook for isolated component testing and UI documentation",
+    ],
+    devIcons: [
+      "/devicons/vitest.svg",
+      "/devicons/testing-library.svg",
+      "/devicons/storybook.svg",
+    ],
+  },
 ];
 
 const Skill = () => {
