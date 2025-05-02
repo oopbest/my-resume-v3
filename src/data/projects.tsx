@@ -20,6 +20,7 @@ import {
   SiPostgresql,
   SiGraphql,
   SiApollographql,
+  SiRender,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 
@@ -53,6 +54,10 @@ export const projects = [
       {
         icon: <SiApollographql className="text-black-500 text-xl" />,
         name: "Apollo GraphQL",
+      },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
       },
     ],
     photos: [
@@ -94,6 +99,10 @@ export const projects = [
       {
         icon: <SiPostgresql className="text-black-500 text-xl" />,
         name: "PostgreSQL",
+      },
+      {
+        icon: <img src="/devicons/neon.svg" className="w-5 h-5" />,
+        name: "Neon",
       },
     ],
     photos: [
@@ -157,6 +166,10 @@ export const projects = [
       {
         icon: <SiCloudinary className="text-black-500 text-xl" />,
         name: "Cloudinary",
+      },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
       },
     ],
     photos: [
@@ -280,6 +293,10 @@ export const projects = [
         icon: <SiJsonwebtokens className="text-black-500 text-xl" />,
         name: "JWT",
       },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
+      },
     ],
     photos: [
       "/project-3/ss-1.png",
@@ -340,6 +357,10 @@ export const projects = [
         icon: <SiCloudinary className="text-black-500 text-xl" />,
         name: "Cloudinary",
       },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
+      },
     ],
     photos: [
       "/project-2/ss-1.png",
@@ -385,6 +406,10 @@ export const projects = [
       {
         icon: <SiMongoose className="text-amber-950 text-xl" />,
         name: "Mongoose",
+      },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
       },
     ],
     photos: [
