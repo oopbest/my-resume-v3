@@ -13,9 +13,17 @@ type TimelineItem = {
 
 const timelineData: TimelineItem[] = [
   {
+    company: "The Siam Commercial Bank Public Company",
+    role: "Frontend Developer",
+    period: "2 May 2025 - Present",
+    responsibilities: [],
+    keyProjects: [],
+    badge: "Contract",
+  },
+  {
     company: "Seeking New Opportunities",
     role: "Full-stack Developer",
-    period: "5 Jan 2025 - Present",
+    period: "5 Jan 2025 - 1 May 2025",
     responsibilities: [
       "Learning and building full-stack projects.",
       "The Complete Full-Stack Web Development Bootcamp",
@@ -32,7 +40,7 @@ const timelineData: TimelineItem[] = [
       "Flutter Application - Created a basic form with stateful widgets in Flutter",
       "Full-stack simple project - Blogs CRUD ( PERN Stack )",
     ],
-    badge: "Open to Work",
+    badge: "Open to Work, Learning",
   },
   {
     company: "Topvalue Corporate Ltd.",
