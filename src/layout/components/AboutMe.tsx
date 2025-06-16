@@ -3,8 +3,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
 import Topic from "./Topic";
+import { calculateAge } from "@/utils/common.utils";
 
 export default function AboutMe() {
+
+  const birthdate = '1988-05-31'; // YYYY-MM-DD
+  const age = calculateAge(birthdate);
+
+
   return (
     <section id="about" className="max-w-4xl mx-auto px-4 py-10">
       <Topic title="About Me" />
@@ -14,7 +20,7 @@ export default function AboutMe() {
           <div>
             <User className="mx-auto text-primary mb-2" size={32} />
             <p className="font-semibold text-lg">Age</p>
-            <p className="text-muted-foreground">36</p>
+            <p className="text-muted-foreground">{age}</p>
           </div>
           <div>
             <Briefcase className="mx-auto text-primary mb-2" size={32} />
