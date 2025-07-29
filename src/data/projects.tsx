@@ -56,6 +56,10 @@ export const projects = [
         name: "Apollo GraphQL",
       },
       {
+        icon: <SiMongodb className="text-green-500 text-xl" />,
+        name: "MongoDB",
+      },
+      {
         icon: <SiRender className="text-black-500 text-xs" />,
         name: "Render",
       },
