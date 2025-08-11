@@ -26,6 +26,53 @@ import { RiNextjsFill } from "react-icons/ri";
 
 export const projects = [
   {
+    id: 8,
+    title: "A Full-Stack Expense Tracker",
+    description:
+      "The application is a full-stack expense tracker built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Apollo GraphQL integration.",
+    stacks: [
+      {
+        icon: <FaReact className="text-blue-500 text-xl" />,
+        name: "React",
+      },
+      {
+        icon: <BiLogoTailwindCss className="text-sky-500 text-xl" />,
+        name: "Tailwind CSS",
+      },
+      {
+        icon: <SiDaisyui className="text-black-500 text-xl" />,
+        name: "Daisy UI",
+      },
+      {
+        icon: <FaNode className="text-green-500 text-xl" />,
+        name: "Node.js",
+      },
+      {
+        icon: <SiExpress className="text-black-500 text-xl" />,
+        name: "Express.js",
+      },
+      {
+        icon: <SiRender className="text-black-500 text-xs" />,
+        name: "Render",
+      },
+      {
+        icon: <SiPostgresql className="text-black-500 text-xl" />,
+        name: "PostgreSQL",
+      },
+      {
+        icon: <img src="/devicons/neon.svg" className="w-5 h-5" />,
+        name: "Neon",
+      },
+    ],
+    photos: [
+      "/project-8/ss-1.png",
+      "/project-8/ss-2.png",
+      "/project-8/ss-3.png",
+    ],
+    projectUrl: "https://pern-crash-course-z8sc.onrender.com/",
+    projectSrc: "https://github.com/oopbest/pern-crash-course",
+  },
+  {
     id: 7,
     title: "A Full-Stack Expense Tracker",
     description:
