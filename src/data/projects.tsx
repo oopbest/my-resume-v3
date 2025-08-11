@@ -27,9 +27,9 @@ import { RiNextjsFill } from "react-icons/ri";
 export const projects = [
   {
     id: 8,
-    title: "A Full-Stack Expense Tracker",
+    title: "Product Store with Postgres & React",
     description:
-      "The application is a full-stack expense tracker built using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Apollo GraphQL integration.",
+      "The application it's likely intended to be a demo or tutorial site for the PERN stack—a web development stack built with PostgreSQL, Express, React, and Node.js, commonly used for creating full-stack applications.",
     stacks: [
       {
         icon: <FaReact className="text-blue-500 text-xl" />,
