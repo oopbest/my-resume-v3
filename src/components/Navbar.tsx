@@ -52,12 +52,14 @@ export default function Navbar() {
     <header className="shadow-lg bg-background/95 sticky top-0 z-50 border-b backdrop-blur supports-[backdrop-filter]:bg-background/60 uppercase">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <a
-          className="cursor-pointer"
+        <button
+          type="button"
+          className="cursor-pointer bg-transparent border-0 p-0"
+          aria-label="Scroll to top"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <AvatarDemo />
-        </a>
+        </button>
 
         {/* Desktop Nav */}
         <div className="flex items-center space-x-4">
@@ -95,14 +97,16 @@ export default function Navbar() {
           <SheetContent side="left" className="w-64">
             <SheetHeader>
               <SheetTitle>
-                <a
-                  className="cursor-pointer"
+                <button
+                  type="button"
+                  className="cursor-pointer bg-transparent border-0 p-0"
+                  aria-label="Scroll to top"
                   onClick={() =>
                     window.scrollTo({ top: 0, behavior: "smooth" })
                   }
                 >
                   <AvatarDemo />
-                </a>
+                </button>
               </SheetTitle>
               <SheetDescription>{""}</SheetDescription>
             </SheetHeader>
