@@ -1,12 +1,12 @@
-import Navbar from "@/components/Navbar";
-import Portfolio from "./components/Portfolio";
-import Skill from "./components/Skill";
-import ContactForm from "./components/ContactForm";
-import Footer from "@/components/Footer";
-import AboutMe from "./components/AboutMe";
+import Navbar from "@/layout/Navbar";
+import Portfolio from "@/sections/Portfolio";
+import Skill from "@/sections/Skill";
+import ContactForm from "@/sections/ContactForm";
+import Footer from "@/layout/Footer";
+import AboutMe from "@/sections/AboutMe";
 import { motion } from "framer-motion";
-import { BackgroundBeamsDemo } from "./components/BackgroundBeamsDemo";
-import Timeline from "./components/Timeline";
+import { BackgroundBeamsDemo } from "@/sections/BackgroundBeamsDemo";
+import Timeline from "@/sections/Timeline";
 
 const MainLayout = () => {
   return (

@@ -7,7 +7,7 @@ import {
   UploadCloud,
 } from "lucide-react";
 import Topic from "./Topic";
-import { HoverEffect } from "@/components/ui/card-hover-effect.tsx";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 const mySkills = [
   {
