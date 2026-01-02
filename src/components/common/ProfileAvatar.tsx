@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-export function AvatarDemo() {
+export function ProfileAvatar() {
   return (
     <Avatar>
       <AvatarImage

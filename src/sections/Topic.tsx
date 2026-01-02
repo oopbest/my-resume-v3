@@ -1,8 +1,8 @@
-type Props = {
+interface TopicProps {
   title: string;
-};
+}
 
-const Topic = ({ title }: Props) => {
+const Topic = ({ title }: TopicProps) => {
   return (
     <div className="mb-10 relative text-center">
       <h2 className="text-3xl font-bold uppercase relative z-10 pt-10 inline-block">

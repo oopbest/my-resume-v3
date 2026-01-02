@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
-import { calculateAge } from "@/utils/common.utils";
+import { calculateAge } from "@/lib/date";
 import Topic from "./Topic";
 
 export default function AboutMe() {

@@ -6,30 +6,23 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Project } from "@/types";
-import { useState } from "react";
+import type { Project } from "@/types";
 import ImageCarousel from "./ImageCarousel";
 import { Badge } from "@/components/ui/badge";
 import { FaGithub } from "react-icons/fa";
 import { LuTvMinimalPlay } from "react-icons/lu";
+import { useImageDialog, useExpandableText } from "@/hooks";
 
-const MAX_LENGTH = 150;
-
-type Props = {
+interface PortfolioGridProps {
   project: Project;
-};
+}
 
-const PortfioGrid = ({ project }: Props) => {
-  const [open, setOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string[]>([]);
-  const [expanded, setExpanded] = useState(false);
-
-  const openDialog = (images: string[]) => {
-    setSelectedImage(images);
-    setOpen(true);
-  };
-
-  const toggleExpand = () => setExpanded(!expanded);
+const PortfioGrid = ({ project }: PortfolioGridProps) => {
+  const { open, selectedImages, openDialog, setOpen } = useImageDialog();
+  const { displayText, shouldTruncate, expanded, toggle } = useExpandableText({
+    text: project.description,
+    maxLength: 150,
+  });
 
   return (
     <div className="p-4 rounded-md bg-secondary/40">
@@ -52,11 +45,9 @@ const PortfioGrid = ({ project }: Props) => {
       </div>
       <p>{project.title}</p>
       <p className="text-sm my-4">
-        {expanded || project.description.length <= MAX_LENGTH
-          ? project.description
-          : `${project.description.slice(0, MAX_LENGTH)}... `}
-        {project.description.length > MAX_LENGTH && (
-          <span className="text-xs p-0 ms-2" onClick={toggleExpand}>
+        {displayText}
+        {shouldTruncate && (
+          <span className="text-xs p-0 ms-2 cursor-pointer" onClick={toggle}>
             {expanded ? "Read less" : "Read more"}
           </span>
         )}
@@ -85,14 +76,14 @@ const PortfioGrid = ({ project }: Props) => {
         )}
       </div>
 
-      {selectedImage && (
+      {selectedImages.length > 0 && (
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogContent className="w-full lg:w-auto max-w-5xl">
             <DialogHeader>
               <DialogTitle>Screenshots</DialogTitle>
               <DialogDescription>{project.title}</DialogDescription>
             </DialogHeader>
-            <ImageCarousel images={selectedImage} />
+            <ImageCarousel images={selectedImages} />
           </DialogContent>
         </Dialog>
       )}

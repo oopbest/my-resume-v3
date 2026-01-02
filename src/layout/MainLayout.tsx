@@ -4,9 +4,9 @@ import Skill from "@/sections/Skill";
 import ContactForm from "@/sections/ContactForm";
 import Footer from "@/layout/Footer";
 import AboutMe from "@/sections/AboutMe";
-import { motion } from "framer-motion";
 import { BackgroundBeamsDemo } from "@/sections/BackgroundBeamsDemo";
 import Timeline from "@/sections/Timeline";
+import { AnimatedSection } from "@/components/common";
 
 const MainLayout = () => {
   return (
@@ -16,48 +16,21 @@ const MainLayout = () => {
         <BackgroundBeamsDemo />
 
         <div className="container mx-auto">
-          {/* about me */}
-          <motion.div
-            className="flex space-x-4"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            viewport={{ once: true }} // Ensure animation only happens once
-          >
+          <AnimatedSection delay={0.5}>
             <AboutMe />
-          </motion.div>
+          </AnimatedSection>
 
-          <motion.div
-            className="flex space-x-4"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            viewport={{ once: true }} // Ensure animation only happens once
-          >
+          <AnimatedSection delay={0.6}>
             <Timeline />
-          </motion.div>
+          </AnimatedSection>
 
-          {/* skills */}
-          <motion.div
-            className="flex space-x-4"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.6 }}
-            viewport={{ once: true }} // Ensure animation only happens once
-          >
+          <AnimatedSection delay={0.6}>
             <Skill />
-          </motion.div>
+          </AnimatedSection>
 
-          {/* portfolio */}
-          <motion.div
-            className="flex space-x-4"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            viewport={{ once: true }} // Ensure animation only happens once
-          >
+          <AnimatedSection delay={0.5}>
             <Portfolio />
-          </motion.div>
+          </AnimatedSection>
         </div>
 
         <ContactForm />

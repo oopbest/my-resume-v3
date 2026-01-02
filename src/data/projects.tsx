@@ -23,8 +23,9 @@ import {
   SiRender,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
+import type { Project } from "@/types";
 
-export const projects = [
+export const projects: Project[] = [
   {
     id: 8,
     title: "Product Store with Postgres & React",
