@@ -17,6 +17,7 @@ import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Topic from "./Topic";
+import { PERSONAL } from "@/data/constants";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -41,7 +42,7 @@ export default function ContactForm() {
     const templateParams = {
       from_name: data.name,
       from_email: data.email,
-      to_email: "setthawut.p@yahoo.com",
+      to_email: PERSONAL.email,
       message: data.message,
     };
 
@@ -76,13 +77,13 @@ export default function ContactForm() {
           </p>
           <div className="mt-4 space-y-2">
             <p>
-              <strong>Email:</strong> setthawut.p@yahoo.com
+              <strong>Email:</strong> {PERSONAL.email}
             </p>
             <p>
-              <strong>Phone:</strong> +66 88 260 5687
+              <strong>Phone:</strong> {PERSONAL.phone}
             </p>
             <p>
-              <strong>Address:</strong> Bangkok, Thailand
+              <strong>Address:</strong> {PERSONAL.address}
             </p>
           </div>
         </div>

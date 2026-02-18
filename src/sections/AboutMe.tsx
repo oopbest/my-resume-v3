@@ -1,12 +1,13 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
-import { calculateAge } from "@/utils/common.utils";
+import { calculateAge, calculateExperience } from "@/utils/common.utils";
+import { PERSONAL } from "@/data/constants";
 import Topic from "./Topic";
 
 export default function AboutMe() {
-  const birthdate = "1988-05-31"; // YYYY-MM-DD
-  const age = calculateAge(birthdate);
+  const age = calculateAge(PERSONAL.birthdate);
+  const experience = calculateExperience(PERSONAL.careerStartDate);
 
   return (
     <section id="about" className="max-w-4xl mx-auto px-4 py-10">
@@ -22,12 +23,12 @@ export default function AboutMe() {
           <div>
             <Briefcase className="mx-auto text-primary mb-2" size={32} />
             <p className="font-semibold text-lg">Experience</p>
-            <p className="text-muted-foreground">11+ Years</p>
+            <p className="text-muted-foreground">{experience} Years</p>
           </div>
           <div>
             <Code2 className="mx-auto text-primary mb-2" size={32} />
             <p className="font-semibold text-lg">Projects</p>
-            <p className="text-muted-foreground">20+ Completed</p>
+            <p className="text-muted-foreground">{PERSONAL.projectsCompleted} Completed</p>
           </div>
         </div>
         <CardContent className="p-6 flex flex-col sm:flex-row gap-6 items-center">
@@ -35,17 +36,17 @@ export default function AboutMe() {
           <div className="flex-shrink-0">
             <Avatar className="w-24 h-24 ring-2 ring-primary ring-offset-2">
               <AvatarImage
-                src="https://avatars.githubusercontent.com/u/21325913?v=4"
-                alt="oopbest"
+                src={PERSONAL.avatarUrl}
+                alt={PERSONAL.name}
               />
-              <AvatarFallback>SP</AvatarFallback>
+              <AvatarFallback>{PERSONAL.initials}</AvatarFallback>
             </Avatar>
           </div>
 
           {/* Text Section */}
           <div className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             <p>
-              I'm a passionate Full-stack Developer with over 11+ years of
+              I'm a passionate Full-stack Developer with over {experience} years of
               experience building scalable web applications and enterprise-level
               solutions. I specialize in frontend technologies like{" "}
               <strong>React</strong> and <strong>Next.js</strong>, along with
