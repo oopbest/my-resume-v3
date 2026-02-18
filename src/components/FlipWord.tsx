@@ -1,16 +1,11 @@
 import { FlipWords } from "@/components/ui/flip-words";
+import { flipWords } from "@/data/constants";
 
 const FlipWordsDemo = () => {
-  const words = [
-    "Setthawut Pimthong",
-    "Frontend Developer",
-    "Full Stack Developer",
-  ];
-
   return (
     <div className="flex justify-center items-center">
       <div className="text-xl md:text-4xl mx-auto font-bold uppercase">
-        <FlipWords words={words} /> <br />
+        <FlipWords words={flipWords} /> <br />
       </div>
     </div>
   );

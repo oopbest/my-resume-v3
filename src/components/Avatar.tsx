@@ -1,13 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { PERSONAL } from "@/data/constants";
 
 export function AvatarDemo() {
   return (
     <Avatar>
       <AvatarImage
-        src="https://avatars.githubusercontent.com/u/21325913?v=4"
-        alt="@oopbest"
+        src={PERSONAL.avatarUrl}
+        alt={PERSONAL.name}
       />
-      <AvatarFallback>SP</AvatarFallback>
+      <AvatarFallback>{PERSONAL.initials}</AvatarFallback>
     </Avatar>
   );
 }

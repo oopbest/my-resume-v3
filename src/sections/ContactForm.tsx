@@ -1,4 +1,3 @@
-"use client";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -17,7 +16,8 @@ import {
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
+import { PERSONAL } from "@/data/constants";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -32,11 +32,7 @@ export default function ContactForm() {
     defaultValues: { name: "", email: "", message: "" },
   });
 
-  const onSubmit = async (data: any) => {
-    // console.log("Form Submitted", data);
-    // toast.success("Form submitted successfully!");
-    // form.reset();
-
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsFormSubmitted(true);
 
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -46,7 +42,7 @@ export default function ContactForm() {
     const templateParams = {
       from_name: data.name,
       from_email: data.email,
-      to_email: "setthawut.p@yahoo.com",
+      to_email: PERSONAL.email,
       message: data.message,
     };
 
@@ -57,16 +53,14 @@ export default function ContactForm() {
         templateParams,
         PUBLIC_KEY // Replace with your EmailJS Public Key
       )
-      .then((response) => {
-        console.log("Email sent successfully:", response);
+      .then(() => {
         toast.success("Message sent successfully!");
         setIsFormSubmitted(false);
-
         form.reset();
       })
-      .catch((error) => {
-        console.error("Error sending email:", error);
+      .catch(() => {
         toast.error("Failed to send message. Please try again.");
+        setIsFormSubmitted(false);
       });
   };
 
@@ -83,13 +77,13 @@ export default function ContactForm() {
           </p>
           <div className="mt-4 space-y-2">
             <p>
-              <strong>Email:</strong> setthawut.p@yahoo.com
+              <strong>Email:</strong> {PERSONAL.email}
             </p>
             <p>
-              <strong>Phone:</strong> +66 88 260 5687
+              <strong>Phone:</strong> {PERSONAL.phone}
             </p>
             <p>
-              <strong>Address:</strong> Bangkok, Thailand
+              <strong>Address:</strong> {PERSONAL.address}
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
-import PortfioGrid from "./PortfioGrid";
+import PortfolioGrid from "./PortfolioGrid";
 import { projects } from "@/data/projects";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 
 const Portfolio = () => {
   return (
@@ -8,7 +8,7 @@ const Portfolio = () => {
       <Topic title="Portfolio" />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {projects.map((project, index) => (
-          <PortfioGrid key={index} project={project} />
+          <PortfolioGrid key={index} project={project} />
         ))}
       </div>
     </div>

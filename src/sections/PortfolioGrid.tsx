@@ -19,7 +19,7 @@ type Props = {
   project: Project;
 };
 
-const PortfioGrid = ({ project }: Props) => {
+const PortfolioGrid = ({ project }: Props) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string[]>([]);
   const [expanded, setExpanded] = useState(false);
@@ -41,6 +41,7 @@ const PortfioGrid = ({ project }: Props) => {
           <img
             src={project.photos[0]}
             alt={project.title}
+            loading="lazy"
             className="absolute z-20 inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-75"
           />
           <div className="absolute z-30 inset-0 hidden group-hover:flex items-center justify-center">
@@ -56,9 +57,14 @@ const PortfioGrid = ({ project }: Props) => {
           ? project.description
           : `${project.description.slice(0, MAX_LENGTH)}... `}
         {project.description.length > MAX_LENGTH && (
-          <span className="text-xs p-0 ms-2" onClick={toggleExpand}>
+          <button
+            type="button"
+            className="text-xs p-0 ms-2 underline cursor-pointer bg-transparent border-0"
+            onClick={toggleExpand}
+            aria-expanded={expanded}
+          >
             {expanded ? "Read less" : "Read more"}
-          </span>
+          </button>
         )}
       </p>
       <div className="flex flex-wrap gap-2">
@@ -92,7 +98,7 @@ const PortfioGrid = ({ project }: Props) => {
               <DialogTitle>Screenshots</DialogTitle>
               <DialogDescription>{project.title}</DialogDescription>
             </DialogHeader>
-            <ImageCarousel images={selectedImage} />
+            <ImageCarousel images={selectedImage} projectTitle={project.title} />
           </DialogContent>
         </Dialog>
       )}
@@ -100,4 +106,4 @@ const PortfioGrid = ({ project }: Props) => {
   );
 };
 
-export default PortfioGrid;
+export default PortfolioGrid;

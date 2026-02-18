@@ -1,5 +1,5 @@
 import { BackgroundBeams } from "@/components/ui/background-beam";
-import FlipWordsDemo from "./FlipWord";
+import FlipWordsDemo from "@/components/FlipWord";
 import { Link } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
@@ -22,7 +22,7 @@ function handleDownload() {
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
       })
-      .catch((error) => console.error("Error downloading the file:", error));
+      .catch(() => {});
   }
 }
 
@@ -51,12 +51,12 @@ export function BackgroundBeamsDemo() {
             </Button>
           </Link>
 
-          <a onClick={handleDownload}>
+          <button type="button" onClick={handleDownload} className="cursor-pointer bg-transparent border-0 p-0">
             <Button className="px-6 py-3 text-lg bg-primary/50">
               <IoMdDownload />
               Download CV
             </Button>
-          </a>
+          </button>
         </div>
       </div>
       <BackgroundBeams />
