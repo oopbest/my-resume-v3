@@ -1,4 +1,3 @@
-"use client";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -32,11 +31,7 @@ export default function ContactForm() {
     defaultValues: { name: "", email: "", message: "" },
   });
 
-  const onSubmit = async (data: any) => {
-    // console.log("Form Submitted", data);
-    // toast.success("Form submitted successfully!");
-    // form.reset();
-
+  const onSubmit = async (data: z.infer<typeof formSchema>) => {
     setIsFormSubmitted(true);
 
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
@@ -57,16 +52,14 @@ export default function ContactForm() {
         templateParams,
         PUBLIC_KEY // Replace with your EmailJS Public Key
       )
-      .then((response) => {
-        console.log("Email sent successfully:", response);
+      .then(() => {
         toast.success("Message sent successfully!");
         setIsFormSubmitted(false);
-
         form.reset();
       })
-      .catch((error) => {
-        console.error("Error sending email:", error);
+      .catch(() => {
         toast.error("Failed to send message. Please try again.");
+        setIsFormSubmitted(false);
       });
   };
 

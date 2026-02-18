@@ -19,7 +19,7 @@ type Props = {
   project: Project;
 };
 
-const PortfioGrid = ({ project }: Props) => {
+const PortfolioGrid = ({ project }: Props) => {
   const [open, setOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string[]>([]);
   const [expanded, setExpanded] = useState(false);
@@ -100,4 +100,4 @@ const PortfioGrid = ({ project }: Props) => {
   );
 };
 
-export default PortfioGrid;
+export default PortfolioGrid;

@@ -22,7 +22,7 @@ function handleDownload() {
         document.body.removeChild(link);
         window.URL.revokeObjectURL(url);
       })
-      .catch((error) => console.error("Error downloading the file:", error));
+      .catch(() => {});
   }
 }
 
