@@ -11,41 +11,8 @@ import { AvatarDemo } from "@/sections/Avatar";
 import { ModeToggle } from "@/sections/ModeToggle";
 import { Menu } from "lucide-react";
 import { Link } from "react-scroll"; // For smooth scrolling
-import {
-  FaUser,
-  FaBriefcase,
-  FaTools,
-  FaImages,
-  FaEnvelope,
-} from "react-icons/fa";
+import { menus } from "@/data/navigation";
 
-const menus = [
-  {
-    title: "About Me",
-    url: "about",
-    icon: <FaUser />,
-  },
-  {
-    title: "Experiences",
-    url: "experiences",
-    icon: <FaBriefcase />,
-  },
-  {
-    title: "Services",
-    url: "services",
-    icon: <FaTools />,
-  },
-  {
-    title: "Portfolio",
-    url: "portfolio",
-    icon: <FaImages />,
-  },
-  {
-    title: "Contact",
-    url: "contact",
-    icon: <FaEnvelope />,
-  },
-];
 
 export default function Navbar() {
   return (

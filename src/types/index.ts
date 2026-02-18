@@ -21,3 +21,18 @@ export interface Project {
   projectUrl: string;
   projectSrc: string;
 }
+
+export interface TimelineItem {
+  company: string;
+  role: string;
+  period: string;
+  responsibilities: string[];
+  keyProjects: string[];
+  badge?: string;
+}
+
+export interface MenuItem {
+  title: string;
+  url: string;
+  icon: React.ReactNode;
+}
