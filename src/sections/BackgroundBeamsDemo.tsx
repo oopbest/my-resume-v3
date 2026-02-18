@@ -51,12 +51,12 @@ export function BackgroundBeamsDemo() {
             </Button>
           </Link>
 
-          <a onClick={handleDownload}>
+          <button type="button" onClick={handleDownload} className="cursor-pointer bg-transparent border-0 p-0">
             <Button className="px-6 py-3 text-lg bg-primary/50">
               <IoMdDownload />
               Download CV
             </Button>
-          </a>
+          </button>
         </div>
       </div>
       <BackgroundBeams />

@@ -56,9 +56,14 @@ const PortfolioGrid = ({ project }: Props) => {
           ? project.description
           : `${project.description.slice(0, MAX_LENGTH)}... `}
         {project.description.length > MAX_LENGTH && (
-          <span className="text-xs p-0 ms-2" onClick={toggleExpand}>
+          <button
+            type="button"
+            className="text-xs p-0 ms-2 underline cursor-pointer bg-transparent border-0"
+            onClick={toggleExpand}
+            aria-expanded={expanded}
+          >
             {expanded ? "Read less" : "Read more"}
-          </span>
+          </button>
         )}
       </p>
       <div className="flex flex-wrap gap-2">
@@ -92,7 +97,7 @@ const PortfolioGrid = ({ project }: Props) => {
               <DialogTitle>Screenshots</DialogTitle>
               <DialogDescription>{project.title}</DialogDescription>
             </DialogHeader>
-            <ImageCarousel images={selectedImage} />
+            <ImageCarousel images={selectedImage} projectTitle={project.title} />
           </DialogContent>
         </Dialog>
       )}

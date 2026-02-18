@@ -10,9 +10,10 @@ import React from "react";
 
 type Props = {
   images: string[];
+  projectTitle?: string;
 };
 
-const ImageCarousel = ({ images }: Props) => {
+const ImageCarousel = ({ images, projectTitle }: Props) => {
   const [api, setApi] = React.useState<CarouselApi>();
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -38,7 +39,7 @@ const ImageCarousel = ({ images }: Props) => {
             <CarouselItem key={index}>
               <img
                 src={image}
-                alt={`Image ${index + 1}`}
+                alt={`${projectTitle ? projectTitle + " - " : ""}Screenshot ${index + 1} of ${images.length}`}
                 className="w-full h-full object-cover"
               />
             </CarouselItem>
