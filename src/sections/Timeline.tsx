@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 import { timelineData } from "@/data/timeline";
 
 export default function Timeline() {

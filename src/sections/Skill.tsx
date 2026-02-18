@@ -1,4 +1,4 @@
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { skills } from "@/data/skills";
 

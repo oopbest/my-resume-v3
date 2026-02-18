@@ -1,6 +1,6 @@
 import PortfolioGrid from "./PortfolioGrid";
 import { projects } from "@/data/projects";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 
 const Portfolio = () => {
   return (

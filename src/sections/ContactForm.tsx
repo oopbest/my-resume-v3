@@ -16,7 +16,7 @@ import {
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 import { PERSONAL } from "@/data/constants";
 
 const formSchema = z.object({

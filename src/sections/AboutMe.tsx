@@ -3,7 +3,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
 import { calculateAge, calculateExperience } from "@/utils/common.utils";
 import { PERSONAL } from "@/data/constants";
-import Topic from "./Topic";
+import Topic from "@/components/Topic";
 
 export default function AboutMe() {
   const age = calculateAge(PERSONAL.birthdate);

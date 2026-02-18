@@ -1,5 +1,5 @@
 import { BackgroundBeams } from "@/components/ui/background-beam";
-import FlipWordsDemo from "./FlipWord";
+import FlipWordsDemo from "@/components/FlipWord";
 import { Link } from "react-scroll";
 import { Button } from "@/components/ui/button";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";

@@ -7,8 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { AvatarDemo } from "@/sections/Avatar";
-import { ModeToggle } from "@/sections/ModeToggle";
+import { AvatarDemo } from "@/components/Avatar";
+import { ModeToggle } from "@/components/ModeToggle";
 import { Menu } from "lucide-react";
 import { Link } from "react-scroll"; // For smooth scrolling
 import { menus } from "@/data/navigation";
