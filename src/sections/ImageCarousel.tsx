@@ -40,6 +40,7 @@ const ImageCarousel = ({ images, projectTitle }: Props) => {
               <img
                 src={image}
                 alt={`${projectTitle ? projectTitle + " - " : ""}Screenshot ${index + 1} of ${images.length}`}
+                loading="lazy"
                 className="w-full h-full object-cover"
               />
             </CarouselItem>

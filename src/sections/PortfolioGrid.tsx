@@ -41,6 +41,7 @@ const PortfolioGrid = ({ project }: Props) => {
           <img
             src={project.photos[0]}
             alt={project.title}
+            loading="lazy"
             className="absolute z-20 inset-0 h-full w-full object-cover transition-transform duration-300 group-hover:scale-105 group-hover:opacity-75"
           />
           <div className="absolute z-30 inset-0 hidden group-hover:flex items-center justify-center">
