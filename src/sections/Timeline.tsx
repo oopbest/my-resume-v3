@@ -20,20 +20,24 @@ export default function Timeline() {
                 </div>
                 {item.badge && <Badge className="mt-2">{item.badge}</Badge>}
 
-                <ul className="mt-4 text-sm list-disc list-inside space-y-1">
-                  {item.responsibilities.map((res, i) => (
-                    <li key={i}>{res}</li>
-                  ))}
-                </ul>
-
-                <div className="mt-4">
-                  <p className="font-medium text-sm">Key Projects:</p>
-                  <ul className="list-disc list-inside text-sm mt-1 space-y-1">
-                    {item.keyProjects.map((proj, i) => (
-                      <li key={i}>{proj}</li>
+                {item.responsibilities && item.responsibilities.length > 0 && (
+                  <ul className="mt-4 text-sm list-disc list-inside space-y-1">
+                    {item.responsibilities.map((res, i) => (
+                      <li key={i}>{res}</li>
                     ))}
                   </ul>
-                </div>
+                )}
+
+                {item.keyProjects && item.keyProjects.length > 0 && (
+                  <div className="mt-4">
+                    <p className="font-medium text-sm">Key Projects:</p>
+                    <ul className="list-disc list-inside text-sm mt-1 space-y-1">
+                      {item.keyProjects.map((proj, i) => (
+                        <li key={i}>{proj}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </CardContent>
             </Card>
           </div>

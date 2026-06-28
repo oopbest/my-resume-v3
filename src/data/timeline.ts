@@ -5,8 +5,12 @@ export const timelineData: TimelineItem[] = [
     company: "The Siam Commercial Bank Public Company",
     role: "Frontend Developer",
     period: "2 May 2025 - Present",
-    responsibilities: [],
-    keyProjects: [],
+    responsibilities: [
+      "Developed internal web applications for marketing teams and SCB Group employees, focusing on account opening and account management systems.",
+      "Contributed to front-end development using Next.js, AngularJS, JavaScript, and TypeScript as the main stack.",
+      "Implemented features, maintained and monitored modules, and resolved issues and defects.",
+    ],
+    keyProjects: ["Account Opening System", "Account Management System"],
     badge: "Contract",
   },
   {

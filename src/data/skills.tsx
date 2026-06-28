@@ -16,7 +16,7 @@ export const skills: Skill[] = [
     description:
       "I build responsive, high-performance web applications using the latest technologies and frameworks. I specialize in building user-friendly interfaces and optimizing performance for optimal user experience.",
     stacks: [
-      "React.js, Next.js (12, 14, 15) for modern, interactive UIs",
+      "React.js, Next.js (12, 14, 15), AngularJS for modern, interactive UIs",
       "TypeScript & JavaScript (ES6+) for scalable and maintainable code",
       "Tailwind CSS, Bootstrap, daisyUI, shadcn/ui, Chakra UI for stunning and responsive designs",
       "State Management with Redux, Redux Toolkit, Zustand, and useContext",
@@ -24,6 +24,7 @@ export const skills: Skill[] = [
     devIcons: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
@@ -111,12 +112,20 @@ export const skills: Skill[] = [
     title: "AI-Powered Development",
     icon: <Cpu className="animate-bounce" />,
     description:
-      "Leveraging AI tools like GitHub Copilot and Windsurf Plugin (formerly Codeium)",
+      "Leveraging AI tools like GitHub Copilot, Claude Code, Windsurf Plugin (formerly Codeium), OpenAI Codex, OpenCode, and Ollama",
     stacks: [
       "GitHub Copilot & Windsurf Plugin (formerly Codeium) for enhanced productivity",
+      "Claude Code, OpenAI Codex, OpenCode, and Ollama for advanced AI-powered coding",
       "AI-assisted debugging and code optimization",
     ],
-    devIcons: ["/devicons/github-copilot.svg", "/devicons/codeium.svg"],
+    devIcons: [
+      "/devicons/github-copilot.svg",
+      "/devicons/codeium.svg",
+      "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/anthropic.svg",
+      "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/openai.svg",
+      "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/opencode.svg",
+      "https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/ollama.svg",
+    ],
   },
   {
     id: 6,
@@ -140,11 +149,12 @@ export const skills: Skill[] = [
     icon: <Lightbulb className="animate-bounce" />,
     description: "I perform end-to-end testing and quality assurance",
     stacks: [
-      "Vitest and React Testing Library for unit and component testing",
+      "Vitest, Jest and React Testing Library for unit and component testing",
       "Storybook for isolated component testing and UI documentation",
     ],
     devIcons: [
       "/devicons/vitest.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg",
       "/devicons/testing-library.svg",
       "/devicons/storybook.svg",
     ],
