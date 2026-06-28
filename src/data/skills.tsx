@@ -92,7 +92,7 @@ export const skills: Skill[] = [
       "I streamline the development lifecycle with CI/CD and deployment tools.",
     stacks: [
       "Git & GitFlow for version control",
-      "Docker & GitHub Actions for automated workflows",
+      "Docker, GitHub Actions & GitLab CI/CD for automated workflows",
       "Vercel for seamless Next.js deployments",
       "Render.com build, deploy, and scale your apps",
       "Neon Serverless Postgres for scalable database solutions",
@@ -100,6 +100,7 @@ export const skills: Skill[] = [
     devIcons: [
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+      "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg",
       "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-plain.svg",

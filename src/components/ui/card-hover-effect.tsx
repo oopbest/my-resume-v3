@@ -42,6 +42,7 @@ const getIconTitle = (url: string): string => {
     "hasura": "Hasura",
     "apollo": "Apollo GraphQL",
     "passportjs": "Passport.js",
+    "gitlab": "GitLab",
     "git": "Git",
     "github": "GitHub",
     "docker": "Docker",
@@ -65,7 +66,8 @@ const getIconTitle = (url: string): string => {
     "storybook": "Storybook"
   };
 
-  for (const [key, value] of Object.entries(customMap)) {
+  const sortedEntries = Object.entries(customMap).sort((a, b) => b[0].length - a[0].length);
+  for (const [key, value] of sortedEntries) {
     if (cleanUrl.includes(key)) {
       return value;
     }

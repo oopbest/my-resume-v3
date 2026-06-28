@@ -7,8 +7,8 @@ export const timelineData: TimelineItem[] = [
     period: "2 May 2025 - Present",
     responsibilities: [
       "Developed internal web applications for marketing teams and SCB Group employees, supporting account opening and account management workflows.",
-      "Contributed to front-end development using Next.js, AngularJS, JavaScript, and TypeScript as the main stack.",
-      "Implemented new features, maintained existing modules, monitored application performance, and resolved production issues.",
+      "Contributed to front-end development using Next.js, AngularJS, TypeScript, JavaScript, and Zustand for state management.",
+      "Implemented new features, maintained existing modules, wrote unit tests with Jest, and resolved defects identified during SIT and UAT to ensure successful production releases.",
     ],
     keyProjects: ["Account Opening System", "Account Management System"],
     badge: "Contract",
