@@ -95,3 +95,32 @@ export function calculateTotalExperience(timeline: TimelineItem[]): number {
   return Math.floor(totalYears);
 }
 
+export function formatPeriod(period: string): string {
+  if (!period) return "";
+  const parts = period.split("-").map(p => p.trim());
+  if (parts.length !== 2) return period;
+  if (period.includes("(")) return period;
+
+  const startStr = parts[0];
+  const endStr = parts[1];
+  if (endStr.toLowerCase() === "present") {
+    return period;
+  }
+
+  try {
+    const start = parseTimelineDate(startStr, false);
+    const end = parseTimelineDate(endStr, true);
+    const totalMonths = Math.round((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24 * 30.4375));
+
+    if (totalMonths >= 12) {
+      const years = Math.floor(totalMonths / 12);
+      return `${period} (${years}+ years)`;
+    } else {
+      const months = Math.max(1, totalMonths);
+      return `${period} (${months}+ months)`;
+    }
+  } catch (e) {
+    return period;
+  }
+}
+

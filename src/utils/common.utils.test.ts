@@ -1,5 +1,5 @@
 import { describe, expect, it, vi, beforeEach, afterEach } from "vitest";
-import { calculateAge, calculateExperience, parseTimelineDate, calculateTotalExperience } from "./common.utils";
+import { calculateAge, calculateExperience, parseTimelineDate, calculateTotalExperience, formatPeriod } from "./common.utils";
 import type { TimelineItem } from "@/types";
 
 describe("calculateAge", () => {
@@ -175,6 +175,25 @@ describe("calculateTotalExperience", () => {
 
     const experience = calculateTotalExperience(sampleTimeline);
     expect(experience).toBe(0);
+  });
+});
+
+describe("formatPeriod", () => {
+  it("formats periods with 'Present' without appending duration", () => {
+    expect(formatPeriod("2 May 2025 - Present")).toBe("2 May 2025 - Present");
+  });
+
+  it("formats periods with years correctly", () => {
+    expect(formatPeriod("Sep 2017 - 5 Jan 2025")).toBe("Sep 2017 - 5 Jan 2025 (7+ years)");
+    expect(formatPeriod("Jun 2013 - Aug 2017")).toBe("Jun 2013 - Aug 2017 (4+ years)");
+  });
+
+  it("formats periods with months correctly", () => {
+    expect(formatPeriod("5 Jan 2025 - 1 May 2025")).toBe("5 Jan 2025 - 1 May 2025 (4+ months)");
+  });
+
+  it("returns original period if already formatted with parenthesis", () => {
+    expect(formatPeriod("Sep 2017 - 5 Jan 2025 (7+ years)")).toBe("Sep 2017 - 5 Jan 2025 (7+ years)");
   });
 });
 

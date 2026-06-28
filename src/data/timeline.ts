@@ -16,7 +16,7 @@ export const timelineData: TimelineItem[] = [
   {
     company: "Learning (Unemployment)",
     role: "",
-    period: "5 Jan 2025 - 1 May 2025 (4+ months)",
+    period: "5 Jan 2025 - 1 May 2025",
     responsibilities: [
       "Spotify Clone - Advanced Project (MERN Stack): A real-time music streaming application inspired by Spotify.",
       "Full-Stack Real-Time Chat App (MERN Stack) : A real-time chat application built using the MERN stack. This application supports features such as one-on-one chats, user search functionality, and real-time notifications.",
@@ -30,7 +30,7 @@ export const timelineData: TimelineItem[] = [
   {
     company: "Topvalue Corporate Ltd.",
     role: "Full-stack Developer",
-    period: "Sep 2017 - 5 Jan 2025 (8+ years)",
+    period: "Sep 2017 - 5 Jan 2025",
     responsibilities: [
       "Designed, developed, and maintained software solutions using Next.js, React, Redux, Redux Toolkit, TypeScript, JavaScript, Bootstrap, Tailwind CSS, RESTful APIs, PHP, MySQL, Magento 1, Magento 2 and other tech stacks.",
       "Managed project timelines and priorities, ensuring alignment with business objectives.",
@@ -55,7 +55,7 @@ export const timelineData: TimelineItem[] = [
   {
     company: "iBusiness Corporation Co., Ltd.",
     role: "PHP Developer",
-    period: "Jun 2013 - Aug 2017 (4+ years)",
+    period: "Jun 2013 - Aug 2017",
     responsibilities: [
       "Designed, developed, and deployed web applications for clients using various technologies, including PHP, MySQL, HTML, CSS, JavaScript, jQuery, Ajax, SOAP, XML, Bootstrap, and responsive web design.",
       "Managed project timelines and priorities, ensuring on-time delivery.",

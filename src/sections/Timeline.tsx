@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Topic from "@/components/Topic";
 import { timelineData } from "@/data/timeline";
+import { formatPeriod } from "@/utils/common.utils";
 
 export default function Timeline() {
   return (
@@ -16,7 +17,7 @@ export default function Timeline() {
                 <h3 className="text-lg font-bold">{item.company}</h3>
                 <div className="flex items-center justify-between">
                   <p className="text-muted-foreground">{item.role}</p>
-                  <p className="text-sm text-muted-foreground">{item.period}</p>
+                  <p className="text-sm text-muted-foreground">{formatPeriod(item.period)}</p>
                 </div>
                 {item.badge && <Badge className="mt-2">{item.badge}</Badge>}
 
