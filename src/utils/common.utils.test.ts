@@ -92,6 +92,25 @@ describe("parseTimelineDate", () => {
     expect(date2.getDate()).toBe(31);
   });
 
+  it("parses dates with parentheses / extra info correctly", () => {
+    const date = parseTimelineDate("1 May 2025 (4+ MONTHS)");
+    expect(date.getFullYear()).toBe(2025);
+    expect(date.getMonth()).toBe(4);
+    expect(date.getDate()).toBe(1);
+  });
+
+  it("parses 2-part dates (Month Year) correctly", () => {
+    const dateStart = parseTimelineDate("Sep 2017 (8+ YEARS)", false);
+    expect(dateStart.getFullYear()).toBe(2017);
+    expect(dateStart.getMonth()).toBe(8); // Sep is 8
+    expect(dateStart.getDate()).toBe(1);
+
+    const dateEnd = parseTimelineDate("Aug 2017 (4+ YEARS)", true);
+    expect(dateEnd.getFullYear()).toBe(2017);
+    expect(dateEnd.getMonth()).toBe(7); // Aug is 7
+    expect(dateEnd.getDate()).toBe(31); // Last day of August
+  });
+
   it("throws error for invalid dates", () => {
     expect(() => parseTimelineDate("Invalid Date")).toThrow();
   });

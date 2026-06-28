@@ -33,13 +33,14 @@ const MONTH_MAP: Record<string, number> = {
   july: 6, august: 7, september: 8, october: 9, november: 10, december: 11
 };
 
-export function parseTimelineDate(dateStr: string): Date {
-  const normalized = dateStr.trim().toLowerCase();
+export function parseTimelineDate(dateStr: string, isEnd = false): Date {
+  const cleanDateStr = dateStr.replace(/\(.*?\)/g, "").trim();
+  const normalized = cleanDateStr.toLowerCase();
   if (normalized === "present") {
     return new Date();
   }
 
-  const parts = dateStr.trim().split(/\s+/);
+  const parts = cleanDateStr.split(/\s+/);
   if (parts.length === 3) {
     const day = parseInt(parts[0], 10);
     const monthStr = parts[1].toLowerCase().substring(0, 3);
@@ -50,7 +51,19 @@ export function parseTimelineDate(dateStr: string): Date {
     }
   }
 
-  const parsed = new Date(dateStr);
+  if (parts.length === 2) {
+    const monthStr = parts[0].toLowerCase().substring(0, 3);
+    const year = parseInt(parts[1], 10);
+    const month = MONTH_MAP[monthStr];
+    if (month !== undefined && !isNaN(year)) {
+      if (isEnd) {
+        return new Date(year, month + 1, 0);
+      }
+      return new Date(year, month, 1);
+    }
+  }
+
+  const parsed = new Date(cleanDateStr);
   if (!isNaN(parsed.getTime())) {
     return parsed;
   }
@@ -66,8 +79,8 @@ export function calculateTotalExperience(timeline: TimelineItem[]): number {
     const parts = item.period.split("-").map(p => p.trim());
     if (parts.length === 2) {
       try {
-        const start = parseTimelineDate(parts[0]);
-        const end = parseTimelineDate(parts[1]);
+        const start = parseTimelineDate(parts[0], false);
+        const end = parseTimelineDate(parts[1], true);
         if (end.getTime() >= start.getTime()) {
           totalMs += (end.getTime() - start.getTime());
         }

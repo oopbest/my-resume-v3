@@ -1,5 +1,6 @@
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import { timelineData } from "./timeline";
+import { calculateTotalExperience } from "../utils/common.utils";
 
 describe("timelineData", () => {
   it("is a non-empty array", () => {
@@ -32,5 +33,12 @@ describe("timelineData", () => {
   it("is ordered by most recent first", () => {
     // First entry should be the current/most recent role
     expect(timelineData[0].period).toContain("Present");
+  });
+
+  it("calculates total experience correctly as 13 years", () => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date("2026-06-28"));
+    expect(calculateTotalExperience(timelineData)).toBe(13);
+    vi.useRealTimers();
   });
 });
