@@ -2,7 +2,7 @@ import { TimelineItem } from "@/types";
 
 export const timelineData: TimelineItem[] = [
   {
-    company: "SCB Bank",
+    company: "SCB – Siam Commercial Bank",
     role: "Frontend Developer",
     period: "2 May 2025 - Present",
     responsibilities: [
