@@ -1,13 +1,14 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Briefcase, Code2, User } from "lucide-react";
-import { calculateAge, calculateExperience } from "@/utils/common.utils";
+import { calculateAge, calculateTotalExperience } from "@/utils/common.utils";
 import { PERSONAL } from "@/data/constants";
 import Topic from "@/components/Topic";
+import { timelineData } from "@/data/timeline";
 
 export default function AboutMe() {
   const age = calculateAge(PERSONAL.birthdate);
-  const experience = calculateExperience(PERSONAL.careerStartDate);
+  const experienceYears = calculateTotalExperience(timelineData);
 
   return (
     <section id="about" className="max-w-4xl mx-auto px-4 py-10">
@@ -23,7 +24,7 @@ export default function AboutMe() {
           <div>
             <Briefcase className="mx-auto text-primary mb-2" size={32} />
             <p className="font-semibold text-lg">Experience</p>
-            <p className="text-muted-foreground">{experience} Years</p>
+            <p className="text-muted-foreground">{experienceYears}+ Years</p>
           </div>
           <div>
             <Code2 className="mx-auto text-primary mb-2" size={32} />
@@ -46,11 +47,12 @@ export default function AboutMe() {
           {/* Text Section */}
           <div className="text-base leading-relaxed text-gray-700 dark:text-gray-300">
             <p>
-              I'm a passionate Full-stack Developer with over {experience} years of
-              experience building scalable web applications and enterprise-level
-              solutions. I specialize in frontend technologies like{" "}
-              <strong>React</strong> and <strong>Next.js</strong>, along with
-              modern styling tools such as
+              I'm a passionate Full-stack Developer with over {experienceYears}+
+              years of experience building scalable web applications and
+              enterprise-level solutions. I specialize in frontend technologies
+              like <strong>React</strong>, <strong>Next.js</strong> and{" "}
+              <strong>AngularJS</strong>, along with modern styling tools such
+              as
               <strong> Tailwind CSS</strong> and <strong>shadcn/ui</strong>.
             </p>
             <p className="mt-4">
